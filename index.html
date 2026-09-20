@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIML Hub — Learn • Build • Grow</title>
+<meta name="description" content="A free learning hub for Artificial Intelligence and Machine Learning students.">
+<style>
+:root{--bg:#050b1a;--panel:#0a1530;--panel2:#0d1c3c;--text:#eef4ff;--muted:#9fb0cc;--blue:#3b82f6;--cyan:#22d3ee;--purple:#8b5cf6;--green:#22c55e;--orange:#f59e0b;--pink:#ec4899;--line:#18345f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% 10%,#10265a 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(5,11,26,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;margin-right:auto}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--purple));font-size:20px}.navlinks{display:flex;gap:20px;color:#c8d5eb;font-size:14px}.navlinks a:hover{color:white}.searchmini{background:#0b1833;border:1px solid #24416f;border-radius:20px;padding:9px 14px;color:#9fb0cc}
+.hero{padding:70px 0 48px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}.eyebrow{color:#55d8ff;font-weight:700;letter-spacing:.08em}.hero h1{font-size:clamp(44px,6vw,76px);line-height:.98;margin:14px 0;background:linear-gradient(90deg,#22d3ee,#fff,#9b8cff);-webkit-background-clip:text;color:transparent}.hero p{font-size:18px;color:var(--muted);line-height:1.7}.hero-search{display:flex;gap:10px;margin-top:25px}.hero-search input{flex:1;background:#0b1936;border:1px solid #294775;color:white;border-radius:14px;padding:15px 17px;font-size:15px}.btn{border:0;border-radius:12px;padding:13px 20px;background:linear-gradient(135deg,var(--blue),#6d5dfc);color:#fff;font-weight:700;cursor:pointer}.visual{min-height:330px;border:1px solid #1b4077;border-radius:28px;background:radial-gradient(circle at 50% 45%,#163e8a,transparent 43%),linear-gradient(145deg,#091a39,#071126);display:grid;place-items:center;position:relative;box-shadow:0 0 80px rgba(42,117,255,.15)}.robot{font-size:115px;filter:drop-shadow(0 0 28px #32b7ff)}.float{position:absolute;padding:10px 14px;border:1px solid #28589a;background:#081a38;border-radius:12px;font-weight:700;font-size:13px}.f1{top:30px;left:25px}.f2{top:60px;right:22px}.f3{bottom:35px;left:45px}.f4{bottom:45px;right:40px}
+.quick{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:10px 0 35px}.quick a{padding:17px;border:1px solid var(--line);background:linear-gradient(145deg,#0b1935,#09142a);border-radius:15px}.quick strong{display:block;font-size:14px;margin-bottom:5px}.quick span{font-size:12px;color:var(--muted)}
+.section{padding:25px 0 45px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.section h2{margin:0;font-size:28px}.section-head p{color:var(--muted);margin:7px 0 0}.layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(145deg,#0b1833,#081329);border:1px solid var(--line);border-radius:18px;padding:22px}.roadmap{position:relative}.year{display:grid;grid-template-columns:100px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid #142a4b}.year:last-child{border-bottom:0}.badge{height:max-content;border-radius:10px;padding:8px;text-align:center;font-weight:800;font-size:13px;background:#123568}.y2{background:#342267}.y3{background:#064f4b}.y4{background:#603b08}.year ul{margin:0;padding-left:20px;color:#b7c5da;line-height:1.9;font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.topic{padding:17px;border-radius:15px;border:1px solid #20436f;background:#0a1935;transition:.2s}.topic:hover{transform:translateY(-3px);border-color:#3978c8}.topic .icon{font-size:26px}.topic h3{font-size:15px;margin:9px 0 4px}.topic p{font-size:12px;color:var(--muted);margin:0}
+.resource{display:grid;grid-template-columns:1fr 1fr;gap:12px}.resource a{padding:16px;border:1px solid #20436f;border-radius:14px;background:#091832}.resource b{display:block}.resource span{font-size:12px;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{padding:20px;border-radius:16px;border:1px solid #24456e;background:linear-gradient(145deg,#0c1c3a,#09142a)}.tag{font-size:11px;color:#6ee7ff}.project h3{margin:8px 0}.project p{font-size:13px;color:var(--muted);line-height:1.6}
+.cta{margin:15px 0 50px;padding:28px;border-radius:20px;border:1px solid #4a2d82;background:linear-gradient(90deg,#101d47,#1a1640);display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{margin:0 0 7px}.cta p{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#90a2bf;font-size:13px}footer .foot{display:flex;justify-content:space-between;gap:20px}footer b{color:white}
+#results{margin-top:12px;color:#7dd3fc;font-size:13px;min-height:18px}
+@media(max-width:900px){.navlinks{display:none}.hero-grid,.layout{grid-template-columns:1fr}.quick{grid-template-columns:repeat(2,1fr)}.grid3,.projects{grid-template-columns:1fr 1fr}.visual{min-height:270px}}
+@media(max-width:560px){.hero{padding-top:45px}.quick,.grid3,.projects,.resource{grid-template-columns:1fr}.hero-search{flex-direction:column}.year{grid-template-columns:80px 1fr}.cta,footer .foot{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a class="brand" href="#home"><span class="logo">🤖</span><span>AIML Hub</span></a>
+<div class="navlinks"><a href="#roadmap">Roadmap</a><a href="#paths">Learning</a><a href="#resources">Resources</a><a href="#projects">Projects</a><a href="#practice">Practice</a><a href="#career">Career</a></div>
+<div class="searchmini">⌕ Search</div>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div><div class="eyebrow">YOUR COMPLETE AI & ML LEARNING HUB</div><h1>Learn.<br>Build.<br>Grow.</h1><p>Everything an aspiring AIML student needs — from programming fundamentals to machine learning projects and internship preparation.</p>
+<div class="hero-search"><input id="search" placeholder="Search Python, ML, SQL, projects..." oninput="searchSite()"><button class="btn" onclick="searchSite()">Search</button></div><div id="results"></div></div>
+<div class="visual"><span class="float f1">🐍 Python</span><span class="float f2">🧠 Machine Learning</span><span class="float f3">📊 Data Science</span><span class="float f4">⚡ Projects</span><div class="robot">🤖</div></div>
+</div></section>
+
+<div class="container">
+<div class="quick">
+<a href="#roadmap"><strong>🗺️ 4-Year Roadmap</strong><span>Plan your journey</span></a>
+<a href="#resources"><strong>▶️ Free Resources</strong><span>Learn without paying</span></a>
+<a href="#practice"><strong>💻 Coding Practice</strong><span>Build problem-solving</span></a>
+<a href="#projects"><strong>🛠️ Real Projects</strong><span>Build your portfolio</span></a>
+<a href="#notes"><strong>📚 Notes</strong><span>Quick revision</span></a>
+<a href="#career"><strong>💼 Internship</strong><span>Prepare for opportunities</span></a>
+</div>
+
+<section class="section" id="roadmap"><div class="section-head"><div><h2>🗺️ 4-Year AIML Roadmap</h2><p>A structured path from beginner to job-ready.</p></div></div>
+<div class="card roadmap">
+<div class="year"><div class="badge">YEAR 1<br>Foundation</div><ul><li>Python + C/C++ fundamentals</li><li>Programming logic & problem solving</li><li>Mathematics for computing</li><li>Git & basic tools</li></ul></div>
+<div class="year"><div class="badge y2">YEAR 2<br>Core Skills</div><ul><li>Data Structures & Algorithms</li><li>Java + SQL & databases</li><li>Web fundamentals</li><li>Object-oriented programming</li></ul></div>
+<div class="year"><div class="badge y3">YEAR 3<br>AI/ML Focus</div><ul><li>Statistics & data analysis</li><li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision & NLP</li></ul></div>
+<div class="year"><div class="badge y4">YEAR 4<br>Advanced</div><ul><li>End-to-end projects</li><li>Internships & portfolio</li><li>Interview preparation</li><li>Research / higher studies</li></ul></div>
+</div></section>
+
+<section class="section" id="paths"><div class="section-head"><div><h2>📚 Learning Paths</h2><p>Choose a technology and progress from basics to projects.</p></div></div>
+<div class="grid3">
+<a class="topic" href="#resources"><div class="icon">🐍</div><h3>Python</h3><p>Basics → OOP → libraries → projects</p></a>
+<a class="topic" href="#resources"><div class="icon">💻</div><h3>C / C++</h3><p>Programming fundamentals → DSA</p></a>
+<a class="topic" href="#resources"><div class="icon">☕</div><h3>Java</h3><p>Core Java → OOP → applications</p></a>
+<a class="topic" href="#resources"><div class="icon">🗄️</div><h3>SQL & Databases</h3><p>Queries → joins → database projects</p></a>
+<a class="topic" href="#resources"><div class="icon">🧩</div><h3>Data Structures & Algorithms</h3><p>DSA → problem solving → interviews</p></a>
+<a class="topic" href="#resources"><div class="icon">∑</div><h3>Mathematics for AI/ML</h3><p>Linear algebra → calculus → statistics</p></a>
+<a class="topic" href="#resources"><div class="icon">🧠</div><h3>Machine Learning</h3><p>Algorithms → evaluation → practice</p></a>
+<a class="topic" href="#resources"><div class="icon">🔗</div><h3>Deep Learning</h3><p>Neural networks → modern architectures</p></a>
+<a class="topic" href="#resources"><div class="icon">👁️</div><h3>Computer Vision</h3><p>Images → CNNs → practical projects</p></a>
+<a class="topic" href="#resources"><div class="icon">💬</div><h3>NLP</h3><p>Text processing → transformers</p></a>
+<a class="topic" href="#resources"><div class="icon">🌐</div><h3>Web Development</h3><p>Frontend → backend → deployment</p></a>
+<a class="topic" href="#projects"><div class="icon">🛠️</div><h3>Project Building</h3><p>Beginner → portfolio-ready</p></a>
+</div></section>
+
+<section class="section" id="resources"><div class="section-head"><div><h2>🎓 Free Learning Resources</h2><p>Use trusted free resources to study at your own pace.</p></div></div>
+<div class="layout"><div class="card"><h3>▶️ Start with YouTube</h3><div class="resource">
+<a href="https://www.youtube.com/results?search_query=python+for+beginners" target="_blank"><b>🐍 Python</b><span>Search beginner playlists ↗</span></a>
+<a href="https://www.youtube.com/results?search_query=C+programming+for+beginners" target="_blank"><b>💻 C Programming</b><span>Search beginner playlists ↗</span></a>
+<a href="https://www.youtube.com/results?search_query=SQL+for+beginners" target="_blank"><b>🗄️ SQL</b><span>Search beginner playlists ↗</span></a>
+<a href="https://www.youtube.com/results?search_query=machine+learning+for+beginners" target="_blank"><b>🧠 Machine Learning</b><span>Search beginner playlists ↗</span></a>
+</div></div>
+<div class="card"><h3>📖 Official Documentation</h3><div class="resource">
+<a href="https://docs.python.org/3/" target="_blank"><b>Python Docs</b><span>Official reference ↗</span></a>
+<a href="https://isocpp.org/" target="_blank"><b>C++ Resources</b><span>ISO C++ community ↗</span></a>
+<a href="https://dev.java/learn/" target="_blank"><b>Java Learning</b><span>Official Java learning ↗</span></a>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank"><b>scikit-learn</b><span>ML user guide ↗</span></a>
+</div></div></div></section>
+
+<section class="section" id="projects"><div class="section-head"><div><h2>🛠️ Project Lab</h2><p>Turn what you learn into evidence of your skills.</p></div></div>
+<div class="projects">
+<div class="project"><span class="tag">BEGINNER</span><h3>🧮 Smart Calculator</h3><p>Practice input, conditions, functions and error handling.</p></div>
+<div class="project"><span class="tag">BEGINNER</span><h3>📊 Student Marks Analyzer</h3><p>Use Python lists, statistics and file handling.</p></div>
+<div class="project"><span class="tag">INTERMEDIATE</span><h3>💬 Sentiment Analyzer</h3><p>Build a basic NLP model that classifies text sentiment.</p></div>
+<div class="project"><span class="tag">INTERMEDIATE</span><h3>🌸 ML Classifier</h3><p>Train, evaluate and visualize a classification model.</p></div>
+<div class="project"><span class="tag">ADVANCED</span><h3>👁️ Image Classifier</h3><p>Explore computer vision and neural networks.</p></div>
+<div class="project"><span class="tag">PORTFOLIO</span><h3>🤖 AIML Capstone</h3><p>Combine data, ML, deployment and documentation into one project.</p></div>
+</div></section>
+
+<section class="section" id="practice"><div class="layout"><div class="card"><h2>💻 Coding Practice</h2><p style="color:var(--muted)">Practice consistently and track your improvement.</p><div class="resource">
+<a href="https://www.hackerrank.com/" target="_blank"><b>HackerRank</b><span>Practice challenges ↗</span></a>
+<a href="https://leetcode.com/" target="_blank"><b>LeetCode</b><span>DSA & interview practice ↗</span></a>
+</div></div>
+<div class="card" id="notes"><h2>📚 Notes & Cheat Sheets</h2><p style="color:var(--muted)">Keep a personal notebook for syntax, mistakes, formulas and project lessons.</p><ul style="color:#b7c5da;line-height:1.9"><li>Python syntax & built-in methods</li><li>C/C++ fundamentals</li><li>SQL query patterns</li><li>ML formulas & evaluation metrics</li></ul></div></div></section>
+
+<div class="cta" id="career"><div><h2>🚀 Build your future, one skill at a time.</h2><p>Learn consistently. Build projects. Document your work. Apply for opportunities.</p></div><a class="btn" href="https://www.linkedin.com/" target="_blank">Build LinkedIn Profile ↗</a></div>
+</div></main>
+
+<footer><div class="container foot"><div><b>🤖 AIML Hub</b><br>Learn • Build • Grow</div><div>Created by <b>Tharun Gowda G</b><br>AIML Learner • Future Developer ❤️</div></div></footer>
+<script>
+const items=[["python","Python"],["c","C / C++"],["java","Java"],["sql","SQL & Databases"],["data structures","Data Structures & Algorithms"],["mathematics","Mathematics for AI/ML"],["machine learning","Machine Learning"],["deep learning","Deep Learning"],["computer vision","Computer Vision"],["nlp","NLP"],["web","Web Development"],["projects","Project Building"],["internship","Internship"],["roadmap","4-Year Roadmap"]];
+function searchSite(){let q=document.getElementById("search").value.trim().toLowerCase(),r=document.getElementById("results");if(!q){r.textContent="";return}let found=items.filter(x=>x[0].includes(q)||x[1].toLowerCase().includes(q)).map(x=>x[1]);r.textContent=found.length?"Found: "+found.join(" • "):"No matching topic yet — try Python, ML, SQL, projects or internship."}
+</script>
+</body></html>
